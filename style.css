@@ -1,0 +1,243 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lora', serif;
+
+}
+.container{
+    width: 100%;
+    height: 100vh; /* vh = view or height */
+    background-color: white;
+    position: relative; 
+}
+.navbar{
+    display: flex; /* show property side by side */
+    justify-content: space-between;/* to create space between the child */
+    width: 85%;
+    margin-left: 100px;
+    align-items: center;/* move div to center vertically */
+
+}
+.logo{
+    width: 130px;
+}
+.listitems{
+    display:inline-block;/*shows the list in one line*/
+    list-style: none;
+    margin: 10px 20px;
+}
+.listitems a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+/*tag:psuedo-class*/
+.listitems a:hover{
+    color: rgb(233, 124, 124);
+}
+
+.title{
+    margin-left: 8%;
+    margin-top: 15%;
+}
+
+.title h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.lastname{
+    color: orange;
+}
+.title a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;/*specifies a height and width*/
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.titleimg{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+}
+.titleimg img{
+    position: absolute;
+    height: 100%;
+    left: 50%;/* declares a left value*/
+    bottom: 0px;/* declares a bottom value*/
+    transform: translateX(-50%);/*removes the scroll bar while declaring left value*/
+    transition: bottom 1s , left 2s;/* moves smoothly  to bottom and left in 1 and 2 sec respectively*/
+}
+
+.titleimg:hover #shape{
+    bottom: 70px;
+}
+
+.titleimg:hover #girl{
+    left: 40%;
+}
+
+#about{
+    margin: 20% 8% 0px 8%;
+}
+.heading{
+    text-align: center;
+
+}
+.heading h2{
+    font-size: 30px;
+}
+.heading span{
+    font-size: 20px;
+    color: green;
+}
+
+.about-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);/*fr - frame(unit) 1fr=255px*/
+    gap: 2rem;/* 1rem= 16px*/
+    margin-top: 2rem;
+}
+
+.about-img img{
+    width: 80%;
+    border-radius: 2rem;
+}
+
+.about-details{
+    font-size: 19px;
+    font-weight: 500;
+    text-align: justify;
+}
+.information{
+    margin-top: 2rem;
+}
+
+.info-box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.info-box i{
+    margin-right: 1rem;
+}
+
+#skills{
+    margin: 8% 8% 0px 8%;
+}
+.skill-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.skill-image img{
+    width: 90%;
+    padding-left: 4rem;
+}
+
+.bar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.base-bar{
+    width: 100%;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.html-bar{
+    background-color: orange;
+    width: 95%;
+}
+
+.css-bar{
+    background-color: orange;
+    width: 88%;
+}
+
+.react-bar{
+    background-color: orange;
+    width: 89%;
+}
+
+.js-bar{
+    background-color: orange;
+    width: 85%;
+}
+.icon-set{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+.icon, .up-arrow{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;/* vertically centered*/
+    align-items: center;/*horizontily center*/
+    margin: 0px 10px;
+}
+
+.icon:hover i{
+    color: white;
+}
+.icon i{
+    font-size: 30px;
+    color: black;
+}
+
+.icon:hover{
+    background-image: linear-gradient(to bottom right , yellow , red );
+    animation: shake 0.75s infinite;/* give name for animation */
+} 
+
+@keyframes shake {
+10% {
+    transform: rotate(15deg);
+}
+20% {
+    transform: rotate(-15deg);
+}
+30%{
+    transform: rotate(15deg);
+};
+40%{
+    transform: rotate(-15deg);
+};
+}/*animation tool*/
+
+.up-arrow{
+    float: right;
+    background-image: linear-gradient(to bottom right , yellow , red );
+    margin: 0px 10px 50px 0px;
+}
+
+.up-arrow:hover i{
+    color: white;
+}
+
+footer{
+    margin-top: 30px;
+}
+
+html{
+    scroll-behavior: smooth;/*scrolls smothily*/
+}
